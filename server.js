@@ -1,8 +1,8 @@
 /*requiring npm packages */
 
 const express = require('express');
-const body-parser = require('body-parser');
-const path = require('path');
+const bodyParser = require('body-parser');
+
 
 /* initialising express and assigning port */
 const app = express();
@@ -17,3 +17,15 @@ app.use(bodyParser.text());
 app.use(bodyParser.json({
   type: "application/vnd.api+json"
 }));
+
+
+
+/* obtaining the routes js files */
+// require("./app/routing/apiRoutes")(app);
+require("./app/routing/htmlRoutes")(app);
+
+
+/*starting the server */
+app.listen(port, function(){
+	console.log("I am working. My port is: " + port)
+})

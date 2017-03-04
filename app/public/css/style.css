@@ -25,10 +25,12 @@ html, body {
 }
 
 h1 {
+  font-size: 30px;
 	color: #7E6CAE;
 }
 
 h3 {
+  font-size: 20px;
 	color: #5A959A;
 }
 .btn {
@@ -56,7 +58,7 @@ h3 {
 footer {
 	width: 100%;
 	position: absolute;
-	bottom: 0px;
+	bottom: 10px;
 }
 
 /*complimentary colors

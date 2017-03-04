@@ -17,6 +17,8 @@ app.use(bodyParser.text());
 app.use(bodyParser.json({
   type: "application/vnd.api+json"
 }));
+
+/* for use of css files */
 app.use(express.static(__dirname + '/app/public'));
 
 

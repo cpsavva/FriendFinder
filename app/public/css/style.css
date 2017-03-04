@@ -56,9 +56,26 @@ h3 {
 }
 
 footer {
-	width: 100%;
-	position: absolute;
-	bottom: 10px;
+
+  position: fixed;
+  height: 25px;
+  bottom: 0;
+  width: 100%;
+  background-color: #fddb92;
+  color: #d1fdff;
+  text-align: center;
+  opacity: .6;
+  
+}
+
+form, .panel {
+  text-align: center;
+}
+
+hr {
+  height: 10px;
+  color: #5A959A;
+
 }
 
 /*complimentary colors

@@ -24,7 +24,7 @@ app.use(express.static(__dirname + '/app/public'));
 
 
 /* obtaining the routes js files */
-// require("./app/routing/apiRoutes")(app);
+require("./app/routing/apiRoutes")(app);
 require("./app/routing/htmlRoutes")(app);
 
 

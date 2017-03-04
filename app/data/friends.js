@@ -1,3 +1,3 @@
 
 
-var friends = [];
+var friends = ['lalala'];

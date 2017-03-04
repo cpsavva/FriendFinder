@@ -53,6 +53,12 @@ h3 {
   text-decoration: none;
 }
 
+footer {
+	width: 100%;
+	position: absolute;
+	bottom: 0px;
+}
+
 /*complimentary colors
 7E6CAE
 5A959A

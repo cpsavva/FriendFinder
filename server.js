@@ -20,7 +20,7 @@ app.use(bodyParser.json({
 
 /* for use of css files */
 app.use(express.static(__dirname + '/app/public'));
-
+app.use(express.static(__dirname + '/app/data'));
 
 
 /* obtaining the routes js files */

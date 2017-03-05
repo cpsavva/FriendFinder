@@ -1,7 +1,6 @@
 
 "Hello World"
-module.exports = {survey};
 
 var survey = [];
 
-
+module.exports = {survey};

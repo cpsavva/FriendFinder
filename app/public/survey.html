@@ -3,11 +3,13 @@
 <head>
 	<title>Survey Time</title>
 </head>
+<script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 <!-- Optional theme -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <link rel="stylesheet" type="text/css" href="./css/style.css">
 <body class='parallax'>
 	<div class="container">
@@ -21,224 +23,179 @@
 			    <form>
 					<div class="form-group">
 					    <label for="nameInout">Name</label>
-					    <input type="text" class="form-control" id="nameInout" placeholder="Name">
+					    <input type="text" class="form-control" id="friendName" placeholder="Name">
 			 		</div>
 				  	<div class="form-group">
 					    <label for="photoURL">Link to Photo</label>
-					    <input type="url" class="form-control" id="photoURL" placeholder="photoURL">
+					    <input type="url" class="form-control" id="friendPhotoURL" placeholder="photoURL">
 				  	</div>
 				  	<hr>
 					<div>
 						<h3>I can easily tell if someone else wants to enter a conversation</h3>
-						<label class="checkbox-inline">
-						  <input type="checkbox" value="1"> 1
-						</label>
-						<label class="checkbox-inline">
-						  <input type="checkbox" value="2"> 2
-						</label>
-						<label class="checkbox-inline">
-						  <input type="checkbox" value="3"> 3
-						</label>
-						<label class="checkbox-inline">
-						  <input type="checkbox" value="4"> 4
-						</label>
-						<label class="checkbox-inline">
-						  <input type="checkbox" value="5"> 5
-						</label>
+						<select class="form-control dropdown" id="Q1">
+						  <option>1</option>
+						  <option>2</option>
+						  <option>3</option>
+						  <option>4</option>
+						  <option>5</option>
+						</select>
 					</div>
 					
 					<div>
 						<h3>It doesn't bother me too much if I am late meeting a friend
 						</h3>
-						<label class="checkbox-inline">
-						  <input type="checkbox" value="1"> 1
-						</label>
-						<label class="checkbox-inline">
-						  <input type="checkbox" value="2"> 2
-						</label>
-						<label class="checkbox-inline">
-						  <input type="checkbox" value="3"> 3
-						</label>
-						<label class="checkbox-inline">
-						  <input type="checkbox" value="4"> 4
-						</label>
-						<label class="checkbox-inline">
-						  <input type="checkbox" value="5"> 5
-						</label>
+						<select class="form-control dropdown" id="Q2">
+						  <option>1</option>
+						  <option>2</option>
+						  <option>3</option>
+						  <option>4</option>
+						  <option>5</option>
+						</select>
 					</div>
 						
 					<div>
 						<h3>I prefer animals to humans</h3>
-						<label class="checkbox-inline">
-						  <input type="checkbox" value="1"> 1
-						</label>
-						<label class="checkbox-inline">
-						  <input type="checkbox" value="2"> 2
-						</label>
-						<label class="checkbox-inline">
-						  <input type="checkbox" value="3"> 3
-						</label>
-						<label class="checkbox-inline">
-						  <input type="checkbox" value="4"> 4
-						</label>
-						<label class="checkbox-inline">
-						  <input type="checkbox" value="5"> 5
-						</label>
+						<select class="form-control dropdown" id='Q3'>
+						  <option>1</option>
+						  <option>2</option>
+						  <option>3</option>
+						  <option>4</option>
+						  <option>5</option>
+						</select>
 					</div>
 					
 					<div>
 						<h3>I try to keep up with the current trends and fashions</h3>
-						<label class="checkbox-inline">
-						  <input type="checkbox" value="1"> 1
-						</label>
-						<label class="checkbox-inline">
-						  <input type="checkbox" value="2"> 2
-						</label>
-						<label class="checkbox-inline">
-						  <input type="checkbox" value="3"> 3
-						</label>
-						<label class="checkbox-inline">
-						  <input type="checkbox" value="4"> 4
-						</label>
-						<label class="checkbox-inline">
-						  <input type="checkbox" value="5"> 5
-						</label>
+						<select class="form-control dropdown" id='Q4'>
+						  <option>1</option>
+						  <option>2</option>
+						  <option>3</option>
+						  <option>4</option>
+						  <option>5</option>
+						</select>
 					</div>
 
 					<div>
 						<h3>I find it difficult to explain to others things that I understand easily, when they don't understand it first time</h3>
-						<label class="checkbox-inline">
-						  <input type="checkbox" value="1"> 1
-						</label>
-						<label class="checkbox-inline">
-						  <input type="checkbox" value="2"> 2
-						</label>
-						<label class="checkbox-inline">
-						  <input type="checkbox" value="3"> 3
-						</label>
-						<label class="checkbox-inline">
-						  <input type="checkbox" value="4"> 4
-						</label>
-						<label class="checkbox-inline">
-						  <input type="checkbox" value="5"> 5
-						</label>
+						<select class="form-control dropdown" id='Q5'>
+						  <option>1</option>
+						  <option>2</option>
+						  <option>3</option>
+						  <option>4</option>
+						  <option>5</option>
+						</select>
 					</div>
 					<div>
 						<h3>I dream most nights</h3>
-						<label class="checkbox-inline">
-						  <input type="checkbox" value="1"> 1
-						</label>
-						<label class="checkbox-inline">
-						  <input type="checkbox" value="2"> 2
-						</label>
-						<label class="checkbox-inline">
-						  <input type="checkbox" value="3"> 3
-						</label>
-						<label class="checkbox-inline">
-						  <input type="checkbox" value="4"> 4
-						</label>
-						<label class="checkbox-inline">
-						  <input type="checkbox" value="5"> 5
-						</label>
+						<select class="form-control dropdown" id='Q6'>
+						  <option>1</option>
+						  <option>2</option>
+						  <option>3</option>
+						  <option>4</option>
+						  <option>5</option>
+						</select>
 					</div>
 					<div>
 						<h3>I really enjoy caring for other people</h3>
-						<label class="checkbox-inline">
-						  <input type="checkbox" value="1"> 1
-						</label>
-						<label class="checkbox-inline">
-						  <input type="checkbox" value="2"> 2
-						</label>
-						<label class="checkbox-inline">
-						  <input type="checkbox" value="3"> 3
-						</label>
-						<label class="checkbox-inline">
-						  <input type="checkbox" value="4"> 4
-						</label>
-						<label class="checkbox-inline">
-						  <input type="checkbox" value="5"> 5
-						</label>
+						<select class="form-control dropdown" id='Q7'>
+						  <option>1</option>
+						  <option>2</option>
+						  <option>3</option>
+						  <option>4</option>
+						  <option>5</option>
+						</select>
 					</div>
 					<div>
 						<h3>I try to solve my own problems rather than discussing them with others
 						</h3>
-						<label class="checkbox-inline">
-						  <input type="checkbox" value="1"> 1
-						</label>
-						<label class="checkbox-inline">
-						  <input type="checkbox" value="2"> 2
-						</label>
-						<label class="checkbox-inline">
-						  <input type="checkbox" value="3"> 3
-						</label>
-						<label class="checkbox-inline">
-						  <input type="checkbox" value="4"> 4
-						</label>
-						<label class="checkbox-inline">
-						  <input type="checkbox" value="5"> 5
-						</label>
+						<select class="form-control dropdown" id='Q8'>
+						  <option>1</option>
+						  <option>2</option>
+						  <option>3</option>
+						  <option>4</option>
+						  <option>5</option>
+						</select>
 					</div>
 					<div>
 						<h3>I find it hard to know what to do in a social situation</h3>
-						<label class="checkbox-inline">
-						  <input type="checkbox" value="1"> 1
-						</label>
-						<label class="checkbox-inline">
-						  <input type="checkbox" value="2"> 2
-						</label>
-						<label class="checkbox-inline">
-						  <input type="checkbox" value="3"> 3
-						</label>
-						<label class="checkbox-inline">
-						  <input type="checkbox" value="4"> 4
-						</label>
-						<label class="checkbox-inline">
-						  <input type="checkbox" value="5"> 5
-						</label>
+						<select class="form-control dropdown" id='Q9'>
+						  <option>1</option>
+						  <option>2</option>
+						  <option>3</option>
+						  <option>4</option>
+						  <option>5</option>
+						</select>
 					</div>
-					<div>
+					<div class='dropdown'>
 						<h3>I am at my best first thing in the morning</h3>
-						<label class="checkbox-inline">
-						  <input type="checkbox" value="1"> 1
-						</label>
-						<label class="checkbox-inline">
-						  <input type="checkbox" value="2"> 2
-						</label>
-						<label class="checkbox-inline">
-						  <input type="checkbox" value="3"> 3
-						</label>
-						<label class="checkbox-inline">
-						  <input type="checkbox" value="4"> 4
-						</label>
-						<label class="checkbox-inline">
-						  <input type="checkbox" value="5"> 5
-						</label>
+						<select class="form-control" id='Q10'>
+						  <option>1</option>
+						  <option>2</option>
+						  <option>3</option>
+						  <option>4</option>
+						  <option>5</option>
+						</select>
 					</div>
 					
 					<br>
-					  <button type="submit" class="btn btn-default">Submit</button>
+					  <button type="submit" class="btn btn-default submit">Submit</button>
 					</div>
 				</form>
-			</div> <--panelbody-->
-		</div><--panel-->
-	</div><--container-->
+			</div><!--panel body -->
+		</div><!--panel-->
+	</div><!--container-->
 	</body>
 	<footer>
 		<a href="./api/friends" target ='_blank'>API Friends List</a> | <a href="https://github.com/cpsavva/FriendFinder" target="_blank">GitHub repo</a>
 	</footer>
 </body>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<script type="text/javascript">
-	 $(".submit").on("click", function(event) {
-      event.preventDefault();
-      // Here we grab the form elements
-      var newReservation = {
-        customerName: $("#reserve-name").val().trim(),
-        phoneNumber: $("#reserve-phone").val().trim(),
-        customerEmail: $("#reserve-email").val().trim(),
-        customerID: $("#reserve-unique-id").val().trim()
-      };
-      console.log(newReservation);
 
+<script type="text/javascript">
+	$(".submit").on("click", function(event) {
+      event.preventDefault();
+      
+       var numbers = [
+	        parseInt($("#Q1").val().trim()),
+	        parseInt($("#Q2").val().trim()),
+	        parseInt($("#Q3").val().trim()),
+	        parseInt($("#Q4").val().trim()),
+	        parseInt($("#Q5").val().trim()),
+	        parseInt($("#Q6").val().trim()),
+	        parseInt($("#Q7").val().trim()),
+	        parseInt($("#Q8").val().trim()),
+	        parseInt($("#Q9").val().trim()),
+	        parseInt($("#Q10").val().trim())
+	        ]
+      function getSum(total, num) {
+		    return total + Math.round(num);
+		}
+		var totalScore = numbers.reduce(getSum, 0);
+		
+
+      var newFriend = {
+        "friendName": $("#friendName").val().trim(),
+        "friendPhotoURL": $("#friendPhotoURL").val().trim(),
+        "score": [
+	        parseInt($("#Q1").val().trim()),
+	        parseInt($("#Q2").val().trim()),
+	        parseInt($("#Q3").val().trim()),
+	        parseInt($("#Q4").val().trim()),
+	        parseInt($("#Q5").val().trim()),
+	        parseInt($("#Q6").val().trim()),
+	        parseInt($("#Q7").val().trim()),
+	        parseInt($("#Q8").val().trim()),
+	        parseInt($("#Q9").val().trim()),
+	        parseInt($("#Q10").val().trim())
+	        ],
+	    "sum": totalScore,
+      };
+
+     console.log(newFriend)
+		
+
+
+
+	 $.post("/api/friends", newFriend);
+    });
 </script>
 </html>

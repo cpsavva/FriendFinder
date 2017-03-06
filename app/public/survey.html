@@ -154,22 +154,22 @@
 	$(".submit").on("click", function(event) {
       event.preventDefault();
       
-       var numbers = [
-	        parseInt($("#Q1").val().trim()),
-	        parseInt($("#Q2").val().trim()),
-	        parseInt($("#Q3").val().trim()),
-	        parseInt($("#Q4").val().trim()),
-	        parseInt($("#Q5").val().trim()),
-	        parseInt($("#Q6").val().trim()),
-	        parseInt($("#Q7").val().trim()),
-	        parseInt($("#Q8").val().trim()),
-	        parseInt($("#Q9").val().trim()),
-	        parseInt($("#Q10").val().trim())
-	        ]
-      function getSum(total, num) {
-		    return total + Math.round(num);
-		}
-		var totalScore = numbers.reduce(getSum, 0);
+  //      var numbers = [
+	 //        parseInt($("#Q1").val().trim()),
+	 //        parseInt($("#Q2").val().trim()),
+	 //        parseInt($("#Q3").val().trim()),
+	 //        parseInt($("#Q4").val().trim()),
+	 //        parseInt($("#Q5").val().trim()),
+	 //        parseInt($("#Q6").val().trim()),
+	 //        parseInt($("#Q7").val().trim()),
+	 //        parseInt($("#Q8").val().trim()),
+	 //        parseInt($("#Q9").val().trim()),
+	 //        parseInt($("#Q10").val().trim())
+	 //        ]
+  //     function getSum(total, num) {
+		//     return total + Math.round(num);
+		// }
+		// var totalScore = numbers.reduce(getSum, 0);
 		
 
       var newFriend = {
@@ -187,7 +187,7 @@
 	        parseInt($("#Q9").val().trim()),
 	        parseInt($("#Q10").val().trim())
 	        ],
-	    "sum": totalScore,
+	    // "sum": totalScore,
       };
 
      console.log(newFriend)
@@ -195,7 +195,24 @@
 
 
 
-	 $.post("/api/friends", newFriend);
-    });
+	 $.post("/api/friends", newFriend, function(data){
+	 	/*courtesy of Wesley Handy */
+
+            var difference = 10000;
+
+            survey.forEach((e, i)=>{
+                var singleDiff = e.scores.map((e)=> parseInt(e))
+                    .reduce((accumulator, value, index)=> {
+                        return accumulator + Math.abs(value - baseScores[index]);
+                    });
+
+                if (singleDiff < difference) {
+                    difference = singleDiff;
+                    newFriend = survey[i];
+                    alert('You have a match!');
+                }
+            });
+        });
+	 });
 </script>
 </html>

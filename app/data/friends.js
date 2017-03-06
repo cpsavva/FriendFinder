@@ -1,3 +1,6 @@
 
+"Hello World"
 
-var friends = ['lalala'];
+var survey = [];
+
+module.exports = {survey};

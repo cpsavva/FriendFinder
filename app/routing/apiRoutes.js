@@ -8,11 +8,13 @@ module.exports = function(app){
 
 
 	app.get('/api/friends', function(request, response){
+		console.log('hello world');
 		response.json(friendData);
 	})
 
 
 	app.post('/api/friends', function(request, response){
 		friendData.push(request.body);
+		console.log(request.body)
 	})
 }

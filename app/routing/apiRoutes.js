@@ -1,3 +1,6 @@
+/*need path to set direct the routes */
+const path = require('path');
+
 /* obtain json list of survey results and friend data */
 
 const friendData = require('../data/friends');

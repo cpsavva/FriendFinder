@@ -31,4 +31,5 @@ require("./app/routing/htmlRoutes")(app);
 /*starting the server */
 app.listen(port, function(){
 	console.log("I am working. My port is: " + port)
-})
+});
+

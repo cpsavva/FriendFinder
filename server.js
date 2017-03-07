@@ -6,7 +6,7 @@ const bodyParser = require('body-parser');
 
 /* initialising express and assigning port */
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;;
 
 /*Sets up the Express app to handle data parsing*/
 app.use(bodyParser.json());

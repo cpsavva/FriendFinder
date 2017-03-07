@@ -183,26 +183,8 @@
 
 
 
-	 $.post("/api/friends", newFriend, function(){
-	// 	var closeFriend = {
-	// 	  name: "",
-	// 	  photo: "",
-	// 	  totalDifference: 10000
-	// 	}
+	 $.post("/api/friends", newFriend);
 
-	// 	for (var i = 0; i < survey.length;i++) {
-	// 	        var diff = 0;
-	// 	    for(var j = 0; j < (friends[i].scores).length;j++) {
-	// 	        diff +=(Math.abs(friends[i].scores[j] - currentUser.scores[j]))
-	// 	    }
-	// 	    if(diff < closeFriend.totalDifference) {
-	// 	    closeFriend.name = friends[i].name;
-	// 	    closeFriend.photo = friends[i].photo;
-	// 	    closeFriend.totalDifference = diff;
-	// 	        console.log(closeFriend)
-	// 	    };
-	// 	};
-	// });
-});
+	});
 </script>
 </html>

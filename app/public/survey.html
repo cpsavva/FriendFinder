@@ -13,9 +13,13 @@
 <link rel="stylesheet" type="text/css" href="./css/style.css">
 <body class='parallax'>
 	<div class="container">
+	<div class='row'>
+		<div class='col-md-3'></div>
+		<div class='col-md-6'>
+
 		<div class="panel panel-default">
 		 	<div class="panel-heading">
-			    <h2 class="panel-title">Survey</h2>
+			    <h1 class="panel-title">Survey</h1>
 			    <p>Please note: all fields are required</p>
 			</div>
 		  	<div class="panel-body">
@@ -33,11 +37,11 @@
 					<div>
 						<h3>I can easily tell if someone else wants to enter a conversation</h3>
 						<select class="form-control dropdown" id="Q1">
-						  <option>1</option>
+						  <option>1<span>  (Strongly Disagree)</span></option>
 						  <option>2</option>
 						  <option>3</option>
 						  <option>4</option>
-						  <option>5</option>
+						  <option>5<span>  (Strongly Agree)</span></option>
 						</select>
 					</div>
 					
@@ -45,95 +49,95 @@
 						<h3>It doesn't bother me too much if I am late meeting a friend
 						</h3>
 						<select class="form-control dropdown" id="Q2">
-						  <option>1</option>
+						  <option>1<span>  (Strongly Disagree)</span></option>
 						  <option>2</option>
 						  <option>3</option>
 						  <option>4</option>
-						  <option>5</option>
+						  <option>5<span>  (Strongly Agree)</span></option>
 						</select>
 					</div>
 						
 					<div>
 						<h3>I prefer animals to humans</h3>
 						<select class="form-control dropdown" id='Q3'>
-						  <option>1</option>
+						  <option>1<span>  (Strongly Disagree)</span></option>
 						  <option>2</option>
 						  <option>3</option>
 						  <option>4</option>
-						  <option>5</option>
+						  <option>5<span>  (Strongly Agree)</span></option>
 						</select>
 					</div>
 					
 					<div>
 						<h3>I try to keep up with the current trends and fashions</h3>
 						<select class="form-control dropdown" id='Q4'>
-						  <option>1</option>
+						  <option>1<span>  (Strongly Disagree)</span></option>
 						  <option>2</option>
 						  <option>3</option>
 						  <option>4</option>
-						  <option>5</option>
+						  <option>5<span>  (Strongly Agree)</span></option>
 						</select>
 					</div>
 
 					<div>
 						<h3>I find it difficult to explain to others things that I understand easily, when they don't understand it first time</h3>
 						<select class="form-control dropdown" id='Q5'>
-						  <option>1</option>
+						  <option>1<span>  (Strongly Disagree)</span></option>
 						  <option>2</option>
 						  <option>3</option>
 						  <option>4</option>
-						  <option>5</option>
+						  <option>5<span>  (Strongly Agree)</span></option>
 						</select>
 					</div>
 					<div>
 						<h3>I dream most nights</h3>
 						<select class="form-control dropdown" id='Q6'>
-						  <option>1</option>
+						  <option>1<span>  (Strongly Disagree)</span></option>
 						  <option>2</option>
 						  <option>3</option>
 						  <option>4</option>
-						  <option>5</option>
+						  <option>5<span>  (Strongly Agree)</span></option>
 						</select>
 					</div>
 					<div>
 						<h3>I really enjoy caring for other people</h3>
 						<select class="form-control dropdown" id='Q7'>
-						  <option>1</option>
+						  <option>1<span>  (Strongly Disagree)</span></option>
 						  <option>2</option>
 						  <option>3</option>
 						  <option>4</option>
-						  <option>5</option>
+						  <option>5<span>  (Strongly Agree)</span></option>
 						</select>
 					</div>
 					<div>
 						<h3>I try to solve my own problems rather than discussing them with others
 						</h3>
 						<select class="form-control dropdown" id='Q8'>
-						  <option>1</option>
+ 						  <option>1<span>  (Strongly Disagree)</span></option>
 						  <option>2</option>
 						  <option>3</option>
 						  <option>4</option>
-						  <option>5</option>
+						  <option>5<span>  (Strongly Agree)</span></option>
 						</select>
 					</div>
 					<div>
 						<h3>I find it hard to know what to do in a social situation</h3>
 						<select class="form-control dropdown" id='Q9'>
-						  <option>1</option>
+						  <option>1<span>  (Strongly Disagree)</span></option>
 						  <option>2</option>
 						  <option>3</option>
 						  <option>4</option>
-						  <option>5</option>
+						  <option>5<span>  (Strongly Agree)</span></option>
 						</select>
 					</div>
-					<div class='dropdown'>
+					<div>
 						<h3>I am at my best first thing in the morning</h3>
-						<select class="form-control" id='Q10'>
-						  <option>1</option>
+						<select class="form-control dropdown" id='Q10'>
+						  <option>1<span>  (Strongly Disagree)</span></option>
 						  <option>2</option>
 						  <option>3</option>
 						  <option>4</option>
-						  <option>5</option>
+						  <option>5<span>  (Strongly Agree)</span></option>
 						</select>
 					</div>
 					
@@ -143,6 +147,9 @@
 				</form>
 			</div><!--panel body -->
 		</div><!--panel-->
+		</div>
+		<div class='col-md-3'></div>
+	</div>
 	</div><!--container-->
 	</body>
 	<footer>
@@ -153,25 +160,7 @@
 <script type="text/javascript">
 	$(".submit").on("click", function(event) {
       event.preventDefault();
-      
-       var numbers = [
-	        parseInt($("#Q1").val().trim()),
-	        parseInt($("#Q2").val().trim()),
-	        parseInt($("#Q3").val().trim()),
-	        parseInt($("#Q4").val().trim()),
-	        parseInt($("#Q5").val().trim()),
-	        parseInt($("#Q6").val().trim()),
-	        parseInt($("#Q7").val().trim()),
-	        parseInt($("#Q8").val().trim()),
-	        parseInt($("#Q9").val().trim()),
-	        parseInt($("#Q10").val().trim())
-	        ]
-      function getSum(total, num) {
-		    return total + Math.round(num);
-		}
-		var totalScore = numbers.reduce(getSum, 0);
 		
-
       var newFriend = {
         "friendName": $("#friendName").val().trim(),
         "friendPhotoURL": $("#friendPhotoURL").val().trim(),
@@ -186,8 +175,7 @@
 	        parseInt($("#Q8").val().trim()),
 	        parseInt($("#Q9").val().trim()),
 	        parseInt($("#Q10").val().trim())
-	        ],
-	    "sum": totalScore,
+	        ]
       };
 
      console.log(newFriend)
@@ -195,7 +183,26 @@
 
 
 
-	 $.post("/api/friends", newFriend);
-    });
+	 $.post("/api/friends", newFriend, function(){
+		var closeFriend = {
+		  name: "",
+		  photo: "",
+		  totalDifference: 10000
+		}
+
+		for (var i = 0; i < survey.length;i++) {
+		        var diff = 0;
+		    for(var j = 0; j < (friends[i].scores).length;j++) {
+		        diff +=(Math.abs(friends[i].scores[j] - currentUser.scores[j]))
+		    }
+		    if(diff < closeFriend.totalDifference) {
+		    closeFriend.name = friends[i].name;
+		    closeFriend.photo = friends[i].photo;
+		    closeFriend.totalDifference = diff;
+		        console.log(closeFriend)
+		    };
+		};
+	});
+});
 </script>
 </html>
